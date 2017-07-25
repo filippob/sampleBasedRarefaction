@@ -31,7 +31,9 @@ getIncrementalOtus <- function(tab) {
     steps <- c(steps,getIncrementalOtus(tab))
   } else {
     
-    steps <- c(steps,1)
+    res <- ifelse(sum(steps)<nrow(tab),nrow(tab)-sum(steps),0)
+    if(res==0) res <- NULL
+    steps <- c(steps,res)
   }
   return(steps)
 }

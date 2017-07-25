@@ -1,4 +1,4 @@
-## R script to measure processing time and memory usage
+## R functions to extract incremental counts from sample table
 ## case of sample-based OTU rarefaction
 ## two implementations: 1) iterative function based on a while loop;  2) recursive function
 
